@@ -1,0 +1,64 @@
+{
+ "creation": "2021-08-06 10:49:55.261135",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "variant",
+  "stock",
+  "rate",
+  "image",
+  "is_primary"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Code"
+  },
+  {
+   "fieldname": "variant",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Variant"
+  },
+  {
+   "fieldname": "stock",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Stock"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_primary",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Primary"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Image"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-08-06 14:55:09.148504",
+ "modified_by": "Administrator",
+ "module": "Tokopedia Connector",
+ "name": "Table Variant",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

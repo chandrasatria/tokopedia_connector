@@ -1,0 +1,35 @@
+{
+ "creation": "2021-08-10 15:58:07.087045",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "id",
+  "logistic_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Id"
+  },
+  {
+   "fieldname": "logistic_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Logistic Name"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-08-10 16:03:49.972752",
+ "modified_by": "Administrator",
+ "module": "Tokopedia Connector",
+ "name": "List Logistic Market",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

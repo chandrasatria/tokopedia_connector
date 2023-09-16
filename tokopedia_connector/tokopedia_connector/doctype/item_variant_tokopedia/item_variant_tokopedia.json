@@ -1,0 +1,54 @@
+{
+ "autoname": "field:item_parent",
+ "creation": "2021-08-06 10:50:48.034713",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_parent",
+  "add_variant",
+  "table_variant"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_parent",
+   "fieldtype": "Link",
+   "label": "Item Parent",
+   "options": "Item",
+   "unique": 1
+  },
+  {
+   "fieldname": "table_variant",
+   "fieldtype": "Table",
+   "label": "Table Variant",
+   "options": "Table Variant"
+  },
+  {
+   "fieldname": "add_variant",
+   "fieldtype": "Button",
+   "label": "Add Variant"
+  }
+ ],
+ "modified": "2021-08-06 11:18:16.646970",
+ "modified_by": "Administrator",
+ "module": "Tokopedia Connector",
+ "name": "Item Variant Tokopedia",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

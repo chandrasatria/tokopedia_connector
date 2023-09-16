@@ -1,0 +1,70 @@
+{
+ "autoname": "field:id",
+ "creation": "2021-06-21 10:35:15.702412",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "id_parent",
+  "parent_name",
+  "id",
+  "name_child",
+  "list_child"
+ ],
+ "fields": [
+  {
+   "fieldname": "id_parent",
+   "fieldtype": "Link",
+   "label": "Id Parent",
+   "options": "List Category Tokopedia"
+  },
+  {
+   "fetch_from": "id_parent.kategori",
+   "fieldname": "parent_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parent Name"
+  },
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "label": "Id",
+   "unique": 1
+  },
+  {
+   "fieldname": "name_child",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name Child"
+  },
+  {
+   "fieldname": "list_child",
+   "fieldtype": "Table",
+   "label": "List Child",
+   "options": "List Child"
+  }
+ ],
+ "modified": "2021-06-22 11:16:43.703851",
+ "modified_by": "lutfi@crativate.com",
+ "module": "Tokopedia Connector",
+ "name": "Child Tokopedia",
+ "owner": "lutfi@crativate.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "name_child",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

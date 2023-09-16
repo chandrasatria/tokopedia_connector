@@ -1,0 +1,51 @@
+{
+ "creation": "2021-08-11 10:15:34.255509",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "variant_1",
+  "variant_2",
+  "item_code",
+  "primary"
+ ],
+ "fields": [
+  {
+   "fieldname": "variant_1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Variant 1"
+  },
+  {
+   "fieldname": "variant_2",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Variant 2"
+  },
+  {
+   "default": "0",
+   "fieldname": "primary",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Primary"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-08-24 11:08:45.593030",
+ "modified_by": "Administrator",
+ "module": "Tokopedia Connector",
+ "name": "Tabel Gabung Variant",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

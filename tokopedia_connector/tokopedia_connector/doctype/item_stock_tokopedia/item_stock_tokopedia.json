@@ -1,0 +1,87 @@
+{
+ "creation": "2021-10-12 09:19:05.135701",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "marketplace_item_tokopedia",
+  "item_name",
+  "item_code",
+  "shop_name",
+  "new_stock",
+  "sku",
+  "bobot",
+  "marketplace"
+ ],
+ "fields": [
+  {
+   "fieldname": "marketplace_item_tokopedia",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Marketplace Item Tokopedia",
+   "options": "Marketplace Item Tokopedia"
+  },
+  {
+   "fetch_from": "marketplace_item_tokopedia.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "marketplace_item_tokopedia.item_code",
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "marketplace_item_tokopedia.shop",
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "new_stock",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "New Stock",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "marketplace_item_tokopedia.item_code",
+   "fieldname": "sku",
+   "fieldtype": "Data",
+   "label": "Sku",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "marketplace_item_tokopedia.bobot",
+   "fieldname": "bobot",
+   "fieldtype": "Data",
+   "label": "Bobot",
+   "read_only": 1
+  },
+  {
+   "fieldname": "marketplace",
+   "fieldtype": "Data",
+   "label": "Marketplace",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-10-26 17:01:16.296539",
+ "modified_by": "Administrator",
+ "module": "Tokopedia Connector",
+ "name": "Item Stock Tokopedia",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

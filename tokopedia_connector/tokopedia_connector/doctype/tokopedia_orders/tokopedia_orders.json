@@ -1,0 +1,324 @@
+{
+ "autoname": "field:order_id",
+ "creation": "2021-06-09 09:17:18.403891",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "customer_name",
+  "customer_phone",
+  "request_pick_up",
+  "accept_order",
+  "make_so",
+  "make_dn",
+  "make_sinv",
+  "column_break_3",
+  "marketplace",
+  "shop_name",
+  "no_referensi",
+  "order_id",
+  "order_status",
+  "no_faktur",
+  "column_break_5",
+  "posting_date",
+  "tanggal_pesan",
+  "days_to_ship",
+  "sudah_lunas",
+  "section_break_8",
+  "nama_penerima",
+  "recipient_address",
+  "column_break_12",
+  "pengambil",
+  "recipient_phone",
+  "recipient_city",
+  "note",
+  "section_break_16",
+  "items",
+  "section_break_30",
+  "currency",
+  "total_amount",
+  "column_break_33",
+  "total_weight",
+  "section_break_20",
+  "list_promo",
+  "total_cashback",
+  "shipment_section",
+  "shipping_carrier",
+  "estimated_shipping_fee",
+  "insurance_price",
+  "voucher_applied",
+  "additional_discount",
+  "tracking_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "marketplace",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Marketplace"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name"
+  },
+  {
+   "fieldname": "order_id",
+   "fieldtype": "Data",
+   "label": "Order ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "order_status",
+   "fieldtype": "Data",
+   "label": "Order Status"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "days_to_ship",
+   "fieldtype": "Data",
+   "label": "Days to Ship"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Detail Customer"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "recipient_address",
+   "fieldtype": "Text",
+   "label": "Recipient Address"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recipient_phone",
+   "fieldtype": "Data",
+   "label": "Recipient Phone"
+  },
+  {
+   "fieldname": "recipient_city",
+   "fieldtype": "Data",
+   "label": "Recipient City"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "List Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Tokopedia Orders Item"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Promo"
+  },
+  {
+   "fieldname": "shipping_carrier",
+   "fieldtype": "Data",
+   "label": "Shipping Carrier"
+  },
+  {
+   "fieldname": "estimated_shipping_fee",
+   "fieldtype": "Currency",
+   "label": "Estimated Shipping Fee"
+  },
+  {
+   "fieldname": "voucher_applied",
+   "fieldtype": "Data",
+   "label": "Voucher Applied"
+  },
+  {
+   "fieldname": "additional_discount",
+   "fieldtype": "Currency",
+   "label": "Additional Discount"
+  },
+  {
+   "fieldname": "tracking_no",
+   "fieldtype": "Data",
+   "label": "Tracking No"
+  },
+  {
+   "fieldname": "insurance_price",
+   "fieldtype": "Currency",
+   "label": "Insurance Price"
+  },
+  {
+   "fieldname": "shipment_section",
+   "fieldtype": "Section Break",
+   "label": "Shipment"
+  },
+  {
+   "fieldname": "total_cashback",
+   "fieldtype": "Currency",
+   "label": "Total Cashback"
+  },
+  {
+   "fieldname": "list_promo",
+   "fieldtype": "Table",
+   "label": "List Promo",
+   "options": "List Promo"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "no_referensi",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "No Referensi"
+  },
+  {
+   "fieldname": "no_faktur",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "No Faktur"
+  },
+  {
+   "default": "0",
+   "fieldname": "sudah_lunas",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Sudah Lunas"
+  },
+  {
+   "fieldname": "nama_penerima",
+   "fieldtype": "Data",
+   "label": "Nama Penerima"
+  },
+  {
+   "fieldname": "customer_phone",
+   "fieldtype": "Data",
+   "label": "Customer Phone"
+  },
+  {
+   "fieldname": "tanggal_pesan",
+   "fieldtype": "Date",
+   "label": "Tanggal Pesan"
+  },
+  {
+   "fieldname": "pengambil",
+   "fieldtype": "Data",
+   "label": "Pengambil"
+  },
+  {
+   "depends_on": "eval:(doc.order_status == \"Payment verified, order ready to process\" && doc.sudah_lunas == 0)\n",
+   "fieldname": "make_so",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Make SO"
+  },
+  {
+   "depends_on": "eval:(doc.order_status == \"Seller accept order\" && doc.sudah_lunas == 0)",
+   "fieldname": "make_dn",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Make DN"
+  },
+  {
+   "depends_on": "eval:(doc.sudah_lunas == 1  || doc.order_status == 'Waiting for pickup')",
+   "fieldname": "make_sinv",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Make SINV"
+  },
+  {
+   "depends_on": "eval: (doc.sudah_lunas == 1 && doc.order_status == 'Payment verified, order ready to process')",
+   "fieldname": "accept_order",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Accept Order"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "Total Weight"
+  },
+  {
+   "depends_on": "eval: (doc.sudah_lunas == 1 && doc.order_status == 'Seller accept order')",
+   "fieldname": "request_pick_up",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Request Pick Up"
+  }
+ ],
+ "modified": "2021-08-27 13:44:25.139200",
+ "modified_by": "Administrator",
+ "module": "Tokopedia Connector",
+ "name": "Tokopedia Orders",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,30 @@
+{
+ "creation": "2021-06-28 10:58:40.559151",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "shop"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop",
+   "options": "Tokopedia Setting",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-06-28 11:26:57.970013",
+ "modified_by": "lutfi@crativate.com",
+ "module": "Tokopedia Connector",
+ "name": "Shop Tokopedia",
+ "owner": "lutfi@crativate.com",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

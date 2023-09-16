@@ -1,0 +1,515 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2021-08-10 15:34:43.948271",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_2",
+  "warehouse",
+  "type",
+  "item_code",
+  "item_name",
+  "new_name",
+  "status_item",
+  "slash_price",
+  "column_break_10",
+  "template",
+  "item_parent",
+  "variasi",
+  "combinasi",
+  "is_primary",
+  "section_break_5",
+  "shop",
+  "bobot",
+  "etalase",
+  "nama_etalase",
+  "app_id",
+  "shop_id",
+  "token",
+  "product_id",
+  "add_etalase",
+  "menu_etalase",
+  "delete_product",
+  "push_product",
+  "edit_product",
+  "slash_price_product_section",
+  "discounted_price",
+  "discount_percentage",
+  "max_order",
+  "slash_cb_column",
+  "start_time_unix",
+  "end_time_unix",
+  "section_break_11",
+  "add_logistic",
+  "list_logistic_market",
+  "kategori_section",
+  "id_parent",
+  "name_parent",
+  "child1",
+  "child1_name",
+  "child2",
+  "child2_name",
+  "speksifikasi",
+  "ada_varian",
+  "spesifikasi_tokpedia",
+  "detail_item_section",
+  "condition_item",
+  "is_free_return",
+  "is_must_insurance",
+  "column_break_22",
+  "min_order",
+  "currency_item_tokopedia",
+  "variant_section",
+  "variant_1",
+  "add_variant_1",
+  "table_variant_1",
+  "variant_2",
+  "add_variant_2",
+  "table_variant_2",
+  "gabung_variant",
+  "tabel_gabung_variant",
+  "delete_produt_variant",
+  "make_product_variant",
+  "push_product_variant",
+  "edit_product_variant"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MKT-ITEM-.MM.-.YYYY.-.#####"
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop",
+   "options": "Tokopedia Setting"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "\nTemplate\nProduct"
+  },
+  {
+   "fieldname": "product_id",
+   "fieldtype": "Data",
+   "label": "Product Id"
+  },
+  {
+   "fieldname": "add_logistic",
+   "fieldtype": "Button",
+   "label": "Add Logistic"
+  },
+  {
+   "fetch_from": "shop.app_id",
+   "fieldname": "app_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "App Id"
+  },
+  {
+   "fetch_from": "shop.shop_id",
+   "fieldname": "shop_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Shop Id"
+  },
+  {
+   "fetch_from": "shop.token",
+   "fieldname": "token",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Token"
+  },
+  {
+   "fieldname": "list_logistic_market",
+   "fieldtype": "Table",
+   "label": "List Logistic Market",
+   "options": "List Logistic Market"
+  },
+  {
+   "fieldname": "etalase",
+   "fieldtype": "Link",
+   "label": "Etalase",
+   "options": "List Etalase"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:(doc.type == \"Template\" || doc.type == \"Product\")",
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Logistic Toko"
+  },
+  {
+   "fieldname": "id_parent",
+   "fieldtype": "Link",
+   "label": "Id Parent",
+   "options": "List Category Tokopedia"
+  },
+  {
+   "fieldname": "child1",
+   "fieldtype": "Link",
+   "label": "Child1",
+   "options": "Child Tokopedia"
+  },
+  {
+   "fetch_from": "`tabList Child`.child_name",
+   "fieldname": "child2",
+   "fieldtype": "Link",
+   "label": "Child2",
+   "options": "List Child"
+  },
+  {
+   "fieldname": "speksifikasi",
+   "fieldtype": "Button",
+   "label": "speksifikasi"
+  },
+  {
+   "fieldname": "spesifikasi_tokpedia",
+   "fieldtype": "Table",
+   "label": "Spesifikasi Tokpedia",
+   "options": "Spesifikasi Tokpedia"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Template\"",
+   "fieldname": "ada_varian",
+   "fieldtype": "Button",
+   "label": "Ada Varian"
+  },
+  {
+   "fieldname": "variant_1",
+   "fieldtype": "Data",
+   "label": "Variant 1"
+  },
+  {
+   "fieldname": "variant_2",
+   "fieldtype": "Data",
+   "label": "Variant 2"
+  },
+  {
+   "depends_on": "eval:(doc.type == \"Template\" || doc.type == \"Product\")",
+   "fieldname": "detail_item_section",
+   "fieldtype": "Section Break",
+   "label": "Detail Item"
+  },
+  {
+   "fieldname": "condition_item",
+   "fieldtype": "Select",
+   "label": "Condition Item",
+   "options": "NEW\nUSED"
+  },
+  {
+   "default": "LIMITED",
+   "fieldname": "status_item",
+   "fieldtype": "Select",
+   "label": "Status Item",
+   "options": "UNLIMITED\nLIMITED\nEMPTY"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_free_return",
+   "fieldtype": "Check",
+   "label": "Is Free Return"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_must_insurance",
+   "fieldtype": "Check",
+   "label": "Is Must Insurance"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "min_order",
+   "fieldtype": "Int",
+   "label": "Min Order"
+  },
+  {
+   "fieldname": "currency_item_tokopedia",
+   "fieldtype": "Select",
+   "label": "Currency Item Tokopedia",
+   "options": "IDR\nUSD"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Product\"",
+   "fieldname": "push_product",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Push Product"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Product\"",
+   "fieldname": "edit_product",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Edit Product"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:(doc.type == \"Template\" || doc.type == \"Product\")",
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Detail Toko"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Product Variant\"",
+   "fieldname": "template",
+   "fieldtype": "Link",
+   "label": "Template",
+   "options": "Marketplace Item Tokopedia"
+  },
+  {
+   "depends_on": "eval:(doc.type == \"Template\" || doc.type == \"Product\")",
+   "fieldname": "kategori_section",
+   "fieldtype": "Section Break",
+   "label": "Kategori"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Product Variant\"",
+   "fetch_from": "template.item_code",
+   "fieldname": "item_parent",
+   "fieldtype": "Data",
+   "label": "Item Parent"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Template\"",
+   "fieldname": "variant_section",
+   "fieldtype": "Section Break",
+   "label": "Variant"
+  },
+  {
+   "fieldname": "add_variant_1",
+   "fieldtype": "Button",
+   "label": "Add Variant 1"
+  },
+  {
+   "fieldname": "add_variant_2",
+   "fieldtype": "Button",
+   "label": "Add Variant 2"
+  },
+  {
+   "fieldname": "table_variant_1",
+   "fieldtype": "Table",
+   "label": "Table Variant 1",
+   "options": "Table Variant 1"
+  },
+  {
+   "fieldname": "table_variant_2",
+   "fieldtype": "Table",
+   "label": "Table Variant 2",
+   "options": "Table Variant 2"
+  },
+  {
+   "fieldname": "tabel_gabung_variant",
+   "fieldtype": "Table",
+   "label": "Tabel Gabung Variant",
+   "options": "Tabel Gabung Variant"
+  },
+  {
+   "fieldname": "gabung_variant",
+   "fieldtype": "Button",
+   "label": "Gabung Variant"
+  },
+  {
+   "fieldname": "push_product_variant",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Push Product Variant"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type == \"Product Variant\"",
+   "fieldname": "is_primary",
+   "fieldtype": "Check",
+   "label": "Is Primary"
+  },
+  {
+   "fieldname": "edit_product_variant",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Edit Product Variant"
+  },
+  {
+   "fieldname": "delete_product",
+   "fieldtype": "Button",
+   "label": "Delete Product"
+  },
+  {
+   "fetch_from": "etalase.etalase",
+   "fieldname": "nama_etalase",
+   "fieldtype": "Data",
+   "label": "Nama Etalase"
+  },
+  {
+   "fetch_from": "id_parent.kategori",
+   "fieldname": "name_parent",
+   "fieldtype": "Data",
+   "label": "Name Parent"
+  },
+  {
+   "fetch_from": "child1.name_child",
+   "fieldname": "child1_name",
+   "fieldtype": "Data",
+   "label": "Child1 Name"
+  },
+  {
+   "fetch_from": "child2.child_name",
+   "fieldname": "child2_name",
+   "fieldtype": "Data",
+   "label": "Child2 Name"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Product Variant\"",
+   "fieldname": "variasi",
+   "fieldtype": "Data",
+   "label": "Variasi"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Product Variant\"",
+   "fieldname": "combinasi",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Combinasi"
+  },
+  {
+   "depends_on": "eval:doc.variant_2 != \"\"",
+   "fieldname": "make_product_variant",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Make Product Variant"
+  },
+  {
+   "fieldname": "delete_produt_variant",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Delete Produt Variant"
+  },
+  {
+   "fieldname": "add_etalase",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Add Etalase"
+  },
+  {
+   "fieldname": "menu_etalase",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Menu Etalase",
+   "options": "Menu Etalase"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type == \"Product\"",
+   "fieldname": "slash_price",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Slash Price"
+  },
+  {
+   "depends_on": "eval:doc.slash_price == 1",
+   "fieldname": "slash_price_product_section",
+   "fieldtype": "Section Break",
+   "label": "Slash Price Product"
+  },
+  {
+   "fieldname": "discounted_price",
+   "fieldtype": "Currency",
+   "label": "discounted_price"
+  },
+  {
+   "fieldname": "discount_percentage",
+   "fieldtype": "Percent",
+   "label": "discount_percentage"
+  },
+  {
+   "fieldname": "slash_cb_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_time_unix",
+   "fieldtype": "Datetime",
+   "label": "start_time_unix"
+  },
+  {
+   "fieldname": "end_time_unix",
+   "fieldtype": "Datetime",
+   "label": "end_time_unix"
+  },
+  {
+   "fieldname": "max_order",
+   "fieldtype": "Int",
+   "label": "max_order"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type == \"Product\"",
+   "fieldname": "new_name",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "New Name"
+  },
+  {
+   "fieldname": "bobot",
+   "fieldtype": "Int",
+   "label": "Bobot"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  }
+ ],
+ "modified": "2021-10-25 11:49:48.811758",
+ "modified_by": "Administrator",
+ "module": "Tokopedia Connector",
+ "name": "Marketplace Item Tokopedia",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "item_name,item_code,shop,bobot",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "item_name",
+ "track_changes": 1
+}

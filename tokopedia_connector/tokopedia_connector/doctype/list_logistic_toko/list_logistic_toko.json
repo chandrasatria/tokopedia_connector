@@ -1,0 +1,56 @@
+{
+ "creation": "2021-08-05 14:58:12.197211",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "shipmentid",
+  "shipmentname",
+  "shippingproductid",
+  "productname",
+  "enable"
+ ],
+ "fields": [
+  {
+   "fieldname": "shipmentid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ShipmentID"
+  },
+  {
+   "fieldname": "shipmentname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ShipmentName"
+  },
+  {
+   "fieldname": "shippingproductid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ShippingProductID"
+  },
+  {
+   "fieldname": "productname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ProductName"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enable"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-08-05 15:46:24.553822",
+ "modified_by": "Administrator",
+ "module": "Tokopedia Connector",
+ "name": "List Logistic Toko",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

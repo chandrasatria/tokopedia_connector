@@ -1,0 +1,44 @@
+{
+ "autoname": "field:service_id",
+ "creation": "2021-08-02 09:57:31.184426",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_id",
+  "service_name",
+  "service_desc"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "service_id",
+   "unique": 1
+  },
+  {
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "service_name"
+  },
+  {
+   "fieldname": "service_desc",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "service_desc"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-08-02 10:38:10.735765",
+ "modified_by": "Administrator",
+ "module": "Tokopedia Connector",
+ "name": "Services Logistic",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

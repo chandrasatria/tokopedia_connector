@@ -1,0 +1,229 @@
+{
+ "autoname": "field:shop_name",
+ "creation": "2021-06-08 14:52:53.072257",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_sync",
+  "general_information_section",
+  "shop_name",
+  "app_id",
+  "client_id",
+  "clien_secret",
+  "column_break_6",
+  "basic_base_64",
+  "token",
+  "make_sinv",
+  "store_infromation_section",
+  "shop_id",
+  "column_break_8",
+  "shop_url",
+  "other_information_section",
+  "warehouse",
+  "customer_group",
+  "column_break_18",
+  "item_group",
+  "price_list",
+  "accounting_information_section",
+  "tax_account",
+  "f_n_f_account",
+  "shipping_account",
+  "section_break_10",
+  "add_etalase",
+  "add_logistic",
+  "list_courier",
+  "list_logistic_toko"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enable_sync",
+   "fieldtype": "Check",
+   "label": "Enable Sync"
+  },
+  {
+   "depends_on": "eval:doc.enable_sync==1",
+   "fieldname": "general_information_section",
+   "fieldtype": "Section Break",
+   "label": "General Information"
+  },
+  {
+   "fieldname": "shop_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "app_id",
+   "fieldtype": "Data",
+   "label": "App Id"
+  },
+  {
+   "fieldname": "token",
+   "fieldtype": "Data",
+   "label": "Token",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.enable_sync==1",
+   "fieldname": "store_infromation_section",
+   "fieldtype": "Section Break",
+   "label": "Store Infromation"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_url",
+   "fieldtype": "Data",
+   "label": "Shop URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "basic_base_64",
+   "fieldtype": "Data",
+   "label": "Basic Base 64",
+   "read_only": 1
+  },
+  {
+   "fieldname": "client_id",
+   "fieldtype": "Data",
+   "label": "Client Id"
+  },
+  {
+   "fieldname": "clien_secret",
+   "fieldtype": "Data",
+   "label": "Clien Secret"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "list_logistic_toko",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "List  Service Logistic Toko",
+   "options": "List Logistic Toko"
+  },
+  {
+   "fieldname": "add_logistic",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Add Logistic"
+  },
+  {
+   "fieldname": "list_courier",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "List Courier",
+   "options": "List Courier"
+  },
+  {
+   "depends_on": "eval:doc.shop_id",
+   "fieldname": "add_etalase",
+   "fieldtype": "Button",
+   "label": "Add Etalase"
+  },
+  {
+   "default": "0",
+   "fieldname": "make_sinv",
+   "fieldtype": "Check",
+   "label": "Make SINV"
+  },
+  {
+   "depends_on": "eval:doc.enable_sync==1",
+   "fieldname": "other_information_section",
+   "fieldtype": "Section Break",
+   "label": "OTHER INFORMATION"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "label": "Customer Group",
+   "options": "Customer Group"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "label": "Price List",
+   "options": "Price List"
+  },
+  {
+   "depends_on": "eval:doc.enable_sync==1",
+   "fieldname": "accounting_information_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Information"
+  },
+  {
+   "fieldname": "tax_account",
+   "fieldtype": "Link",
+   "label": "Tax Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "f_n_f_account",
+   "fieldtype": "Link",
+   "label": "Freight and Forwarding Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "shipping_account",
+   "fieldtype": "Link",
+   "label": "Shipping Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
+  }
+ ],
+ "modified": "2021-10-26 13:49:22.672132",
+ "modified_by": "Administrator",
+ "module": "Tokopedia Connector",
+ "name": "Tokopedia Setting",
+ "owner": "lutfi@crativate.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
